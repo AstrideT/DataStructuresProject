@@ -1,9 +1,11 @@
-#include <iostream>
-using namespace std;
+
 //*****************************************************************************
 // Question 2:Implementing Fibonacci series up to a value entered by user
 //Using Dynamic Linked List
 //*********************************************************************************
+
+#include <iostream>
+using namespace std;
 class Node {
 
 private:
@@ -210,20 +212,20 @@ public:
 
 		Node* firstNodePtr = headPtr->getNextNodePtr();
 		Node* secondNodePtr = firstNodePtr->getNextNodePtr();
-		Node*currentNodePtr= new Node();
-		
-		int lastFibonaccinumber=0;
+		Node*currentNodePtr = new Node();
+
+		int lastFibonaccinumber = 0;
 		int value1 = firstNodePtr->getData();
-		int value2=secondNodePtr->getData();
+		int value2 = secondNodePtr->getData();
 		int temp;
 		while (lastFibonaccinumber < upperBound) {
 			lastFibonaccinumber = value1 + value2;
-			if(lastFibonaccinumber<upperBound)
+			if (lastFibonaccinumber<upperBound)
 				insert(lastFibonaccinumber);//Ensures final value inserted is less than upper bound
 			value1 = value2;
 			value2 = lastFibonaccinumber;
-		
-			
+
+　
 		}
 		// complete the code to construct a singly linked list that has the elements of the 
 		// Fibonacci sequence less than or equal to the upperBound
