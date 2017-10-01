@@ -1,6 +1,6 @@
 
 //*****************************************************************************
-// Question 2:Implementing Fibonacci series up to a value entered by user
+// Implementing Fibonacci series up to a value entered by user
 //Using Dynamic Linked List
 //*********************************************************************************
 
@@ -218,10 +218,10 @@ public:
 		int value1 = firstNodePtr->getData();
 		int value2 = secondNodePtr->getData();
 		int temp;
-		while (lastFibonaccinumber < upperBound) {
+		while (lastFibonaccinumber <= upperBound) {
 			lastFibonaccinumber = value1 + value2;
-			if (lastFibonaccinumber<upperBound)
-				insert(lastFibonaccinumber);//Ensures final value inserted is less than upper bound
+			if (lastFibonaccinumber<=upperBound)
+				insert(lastFibonaccinumber);//Ensures final value inserted is less than or equal to upper bound
 			value1 = value2;
 			value2 = lastFibonaccinumber;
 
